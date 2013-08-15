@@ -3,6 +3,10 @@
 
 
 
+![RPi](images/RaspiModelB.png)
+
+
+
 ## Raspberry Pi Computer
 * Cheap, $35 USD
 * Powerful
@@ -15,16 +19,37 @@
 ## What can be done with a Raspberry Pi?
 
 
-## RaspBMC
+## Home Automation
+![Home Automation](images/carriotsAlertSystem.jpg)
 
 
+## Dynamic Bike Headlight
+![Bike Headlight](images/dynamicBikeHeadlight.jpg)
 
-## Home automation
 
+## Raspbmc
+![Raspbmc](images/raspbmc.png)
+
+
+## Games
+![Quake](images/quake.jpg)
+
+
+![Minecraft](images/minecraft.jpg)
 
 
 ## Education!
+![Edu](images/Dachio.jpg)
 
+
+
+## Let's build this simple circuit
+![Pullup Resistor](images/pullup.png)
+
+* Connect:
+  * Vcc to pin 3.3V
+  * Ground to GND
+  * Input Pin to pin 25
 
 
 
@@ -32,7 +57,7 @@
 We're using Raspbian, but there are many flavors!
 
 
-## OK, Let's get started
+## OK, Let's start!
 * User: `pi`
 * Password: `raspberry`
 
@@ -55,7 +80,7 @@ Move around
     cd MakerFaire
 Make a file
     
-    touch filename.py
+    touch game.py
 
 
 ##  Ok, time for the safety of the GUI
@@ -63,19 +88,8 @@ Make a file
 
 
 
-
-## Let's build this simple circuit
-* Connect:
-  * Vcc to pin 3.3V
-  * Ground to GND
-  * Input Pin to pin 25
-
-![Pullup Resistor](images/pullup.png)
-
-
-
-## Let's Look at Code!
-* Python to make a game!
+## Let's Code!
+* Python
 * RPi.GPIO and stopwatch modules
 * Five Second Stadium
 
@@ -92,3 +106,29 @@ Make a file
 
 ## Switch Bounce
 ![Taken from www.ikalogic.com](images/debounceCircuit.jpg)
+
+* Connect:
+  * 10uF Capacitor between GND and input rows
+
+
+
+ ## Let's try that again!
+     sudo python ffs.py
+
+
+     
+ ## Finished!
+
+<!-- A resistor pulls  a capacitor  up to  5
+volts (or what ever your positive supply voltage is if you're using CMOS. Up to
+15 volts) Because of the time coefficient of the capacitor  and resistor,  this
+takes time to occur. The bigger the capacitor or resistor, the longer it takes.
+Placed at the junction of the resitor and capacitor, the momentary press button
+pulls the capacitor to ground. It doesn't short out the power supply because of
+the resistor. When the switch is made, the voltage on the capacitor falls  away
+very  rapidly to  nothing. or  near nothing  depending on  the switch.  (That's
+another story and I'll get to that) When the switch is  released the  potential
+across  the  capacitor  is  charged  up  again  slowly  by  the  resistor.  The
+charge/discharge rate is a smooth logarithmic curve. One faster than the other.
+http://www.all-electric.com/schematic/<debounce class="htm"></debounce>
+ -->
