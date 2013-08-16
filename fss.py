@@ -13,32 +13,21 @@ print "Press ctrl + c to quit"
 print "--------------------------------------------------------------\n"
 
 while True:
-  try:
     print "Start?"
     GPIO.wait_for_edge(pin, GPIO.FALLING)
-    # nah = raw_input()
-    # if nah == 'q': break
     t = stopwatch.Timer()
     print "***Started!***\n\n"
     
     print "Stop?"
     GPIO.wait_for_edge(pin, GPIO.FALLING)
-    # nah = raw_input()
-    # if nah == 'q': break
     t.stop()
     rounded = "%.2f" % t.elapsed
     print rounded, " seconds!"
-    if float(rounded) == 5: 
+    
+    if float(rounded) == 5:
         print "*** Congratulations Champion! ***"
     else:
         print "So Close!"
     
     print "Would you like to play again?"
     GPIO.wait_for_edge(pin, GPIO.FALLING)
-    # nah = raw_input()
-    # if nah == 'q': break
-  except:
-    print "Interrupted!"  # This never gets printed...
-    GPIO.cleanup()       # clean up GPIO on CTRL+C exit
-
-# GPIO.cleanup() # not needed with button version

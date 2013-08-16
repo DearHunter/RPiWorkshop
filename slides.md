@@ -90,34 +90,8 @@ Make a file
 
 ## Let's Code!
 * Python
-* RPi.GPIO and stopwatch modules
+* Ben Croston's RPi.GPIO and John Paulett's stopwatch modules
 * Five Second Stadium
-
-
-
-## Let's Play!
-    sudo python ffs.py
-
-
-
-## What's the problem with our current design?
-
-
-
-## Switch Bounce
-![Taken from www.ikalogic.com](images/debounceCircuit.jpg)
-
-* Connect:
-  * 10uF Capacitor between GND and input rows
-
-
-
- ## Let's try that again!
-     sudo python ffs.py
-
-
-     
- ## Finished!
 
 <!-- A resistor pulls  a capacitor  up to  5
 volts (or what ever your positive supply voltage is if you're using CMOS. Up to

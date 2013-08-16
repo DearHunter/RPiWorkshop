@@ -47,6 +47,48 @@
 					</aside>
 
 				</section>
+				<section>
+					
+						<code><pre>import stopwatch</pre></code>
+						<div class="fragment"><code data-trim contenteditable><pre>import RPi.GPIO as GPIO</pre></code></div>
+						<div class="fragment"><code><pre>    </pre></code></div>
+						<div class="fragment"><code><pre>pin = 25</pre></code></div>
+						<div class="fragment"><code><pre>    </pre></code></div>
+						<div class="fragment"><code><pre>GPIO.setmode(GPIO.BCM)</pre></code></div>
+						<div class="fragment"><code><pre>GPIO.setup(pin, GPIO.IN)</pre></code></div>
+						<div class="fragment"><code><pre>    </pre></code></div>
+						<div class="fragment"><code><pre>print "\n***************************************"</pre></code></div>
+						<div class="fragment"><code><pre>print "*** Welcome to Five Second Stadium! ***"</pre></code></div>
+						<div class="fragment"><code><pre>print "***************************************\n"</pre></code></div>
+						<div class="fragment"><code><pre>print "Press the BUTTON to start and press again to stop after 5 sec!"</pre></code></div>
+						<div class="fragment"><code><pre>print "Press ctrl + c to quit"</pre></code></div>
+						<div class="fragment"><code><pre>print "--------------------------------------------------------------\n"</pre></code></div>
+						<div class="fragment"><code><pre>    </pre></code></div>
+						<!-- NEW SECTION -->
+				</section>
+				<section>
+						<div><code><pre>while True:</pre></code></div>
+						<div class="fragment"><code><pre>    print "Start?"</pre></code></div>
+						<div class="fragment"><code><pre>    GPIO.wait_for_edge(pin, GPIO.FALLING)</pre></code></div>
+						<div class="fragment"><code><pre>    t = stopwatch.Timer()</pre></code></div>
+						<div class="fragment"><code><pre>    print "***Started!***\n\n"</pre></code></div>
+						<!-- <div class="fragment"><code><pre>    </pre></code></div> -->
+						<div class="fragment"><code><pre>    print "Stop?"</pre></code></div>
+						<div class="fragment"><code><pre>    GPIO.wait_for_edge(pin, GPIO.FALLING)</pre></code></div>
+						<div class="fragment"><code><pre>    t.stop()</pre></code></div>
+						<div class="fragment"><code><pre>    rounded = "%.2f" % t.elapsed</pre></code></div>
+						<div class="fragment"><code><pre>    print rounded, " seconds!"</pre></code></div>
+						<div class="fragment"><code><pre>    </pre></code></div>
+						<div class="fragment"><code><pre>    if float(rounded) == 5:</pre></code></div>
+						<div class="fragment"><code><pre>        print "*** Congratulations Champion! ***"</pre></code></div>
+						<div class="fragment"><code><pre>    else:</pre></code></div>
+						<div class="fragment"><code><pre>        print "So Close!"</pre></code></div>
+						<div class="fragment"><code><pre>    </pre></code></div>
+						<div class="fragment"><code><pre>    print "Would you like to play again?"</pre></code></div>
+						<div class="fragment"><code><pre>    GPIO.wait_for_edge(pin, GPIO.FALLING)</pre></code></div>
+				</section>
+				<section data-markdown="slides2.md" data-separator="^\n\n\n" data-vertical="^\n\n">
+
 	</div>
 
 </div>
