@@ -92,6 +92,7 @@ Make a file
 * Python
 * Ben Croston's RPi.GPIO and John Paulett's stopwatch modules
 * Five Second Stadium
+* IDLE, Your python environment
 
 <!-- A resistor pulls  a capacitor  up to  5
 volts (or what ever your positive supply voltage is if you're using CMOS. Up to
